@@ -6,6 +6,7 @@
 
 * [Get Started](https://www.intelrealsense.com/get-started-depth-camera/)
 * [Linux Distribution](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md)
+* Start: `realsense-viewer`
 
 
 
