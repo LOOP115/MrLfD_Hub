@@ -5,7 +5,7 @@ Step-by-Step Guide to Install Resources for Franka Emika Panda Robot
 
 
 
-## Ubuntu
+# Ubuntu
 
 Download and install Ubuntu 22.04.2 LTS (Jammy Jellyfish)
 
@@ -15,7 +15,7 @@ Download and install Ubuntu 22.04.2 LTS (Jammy Jellyfish)
 
 
 
-## ROS2
+# ROS2
 
 Install ROS2 (Humble Hawksbill)
 
@@ -24,7 +24,7 @@ Install ROS2 (Humble Hawksbill)
 
 
 
-## Libfranka
+# Libfranka
 
 Follow the instruction here: 
 
@@ -41,6 +41,7 @@ cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF ..
 cmake --build . -j$(nproc)
 cpack -G DEB
+
 sudo dpkg -i libfranka-*.deb    # replace the * with the actual numbers in the file name, which can be found in the current directory (run "ls" to see)
 ```
 
@@ -49,14 +50,14 @@ go back to home directory with “cd” command
 → The official documentation for this part can be found here:
 
 - [https://frankaemika.github.io/docs/installation_linux.html](https://frankaemika.github.io/docs/installation_linux.html)
-- ******************IMPORTANT******************
+- **IMPORTANT**
     - This results in new “shared library files” (.so) files for libfranka, which can now be found and verified at “/usr/lib/”
     - We need to then re-build franka_ws (which contains the package franka_ros2)
     - to do this, simply remove the build, install and log folders in franka_ws, and then colcon build
 
 
 
-## Franka_ros2
+# Franka_ros2
 
 For franka_ros2, install the required packages by executing the following commands
 in terminal:
@@ -105,10 +106,13 @@ Create a workspace for ros2 and clone the given github repository:
 ```bash
 cd project && mkdir franka_ws
 cd franka_ws && mkdir src && cd src
-git clone [https://github.com/mcbed/franka_ros2.git](https://github.com/mcbed/franka_ros2.git)
+git clone https://github.com/mcbed/franka_ros2.git
+
 cd franka_ros2 && git checkout humble
-cd ..
+
+cd
 cd project/franka_ws
+
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR=/home/<path_to_your_libfranka_folder>/build
 ```
 
@@ -124,18 +128,18 @@ source /home/<your_usernmae>/project/franka_ws/install/setup.sh
 
 
 
-## Run the example
+# Run the example
 
 The above steps are also mentioned here (except github repository). Furthermore,
 execute the example to verify the installation.
 
 ```bash
-ros2 launch franka_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_hardware:=true
+ros2 launch franka_moveit_config [moveit.launch.py](http://moveit.launch.py/) robot_ip:=dont-care use_fake_hardware:=true
 ```
 
 
 
-## Install Gazebo
+# Install Gazebo
 
 Install Gazebo Fortress by executing the following commands:
 
@@ -143,7 +147,7 @@ Install Gazebo Fortress by executing the following commands:
 sudo apt-get update
 sudo apt-get install lsb-release wget gnupg
 
-sudo wget [https://packages.osrfoundation.org/gazebo.gpg](https://packages.osrfoundation.org/gazebo.gpg) -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
+sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] [http://packages.osrfoundation.org/gazebo/ubuntu-stable](http://packages.osrfoundation.org/gazebo/ubuntu-stable) $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 # note: the above operation should create a line in "/etc/apt/sources.list.d/gazebo-stable.list" and should look something like this (will vary according to computer architecture & the version of Ubuntu):
@@ -161,11 +165,13 @@ Install the following package for panda model in gazebo:
 
 ```bash
 cd project/franka_ws/src
-git clone [https://github.com/AndrejOrsula/panda_ign_moveit2.git](https://github.com/AndrejOrsula/panda_ign_moveit2.git)
+git clone https://github.com/AndrejOrsula/panda_ign_moveit2.git
 cd panda_ign_moveit2
 git checkout humble
 cd && cd project/franka_ws
 ```
+
+
 
 ## Important: Extra steps needed!
 
@@ -176,12 +182,14 @@ Before **building**, we need to edit 2 bash scripts which generate **sdf** and *
 - look at **line 16**, change “**effort**” to “**position**”
 - do the **exact same** for “xacro2urdf.bash”
 
-Now, we can simply go to the ********************************root of the workspace******************************** and **********build**********:
+Now, we can simply go to the **root of the workspace** and **build**:
 
 ```cpp
 cd && cd project/franka_ws
 colcon build
 ```
+
+
 
 ## Old Debug Steps (“100% will work” - Muhammad)
 
@@ -210,7 +218,7 @@ gedit ~/franka_ws/src/panda_ign_moveit2/panda_description/panda/model.sdf
 
 ## Install gz_ros2_control (required to launch gazebo)
 
-1. Go to the src directory of your workspace
+1. Go to the src directory workspace
     1. (might need this first) → “`sudo apt-get install libignition-cmake2-dev`” (link to the discussion on the issue: [https://github.com/PX4/PX4-Autopilot/issues/20923](https://github.com/PX4/PX4-Autopilot/issues/20923))
     2. `git clone [https://github.com/ros-controls/gz_ros2_control.git](https://github.com/ros-controls/gz_ros2_control.git) -b humble`
     3. `cd gz_ros2_control/`
@@ -289,7 +297,7 @@ CallbackReturn FrankaHardwareInterface::on_activate(
 void setForceTorqueCollisionBehavior();  // this is the added line
 ```
 
-- Go back to the ********root******** of the franka_ws
+- Go back to the **root** of the franka_ws
 - **colcon build**
 - Double check that the build produced an updated **robot.hpp** file in the install folder of the workspace
     - cd **/install/franka_hardware/include/franka_hardware**
@@ -297,14 +305,14 @@ void setForceTorqueCollisionBehavior();  // this is the added line
     - make sure that “**void setForceTorqueCollisionBehavior()**” is there
     - **IF IT IS NOT THERE**
         - can simply remove the “**build**”, “**install**” and “**log**” folders from the root of **franka_ws**
-            - [in the ********root******** of **franka_ws**] rm -r build install log
+            - [in the **root** of **franka_ws**] rm -r build install log
             - and then **colcon build** (in the root of franka_ws)
 
 
 
 ## Properly enable real-time kernel on Ubuntu 22.04 (solves “communication_constraint_violation”)
 
-- Create a new Ubuntu One account using your email
+- Create a new Ubuntu One account using your email, and register to Ubuntu Pro (free for personal use)
 - Find the free token and copy it
 - To attach your personal machine to a free Pro subscription, run: `sudo pro attach <your_token>`.
 - To enable the real-time beta kernel, run:
@@ -356,7 +364,7 @@ sudo systemctl daemon-reload && sudo systemctl restart cpufrequtils
 ## Launching controllers through LAUNCH FILES
 
 - package “controller_manager” is located at /opt/ros/humble/lib/controller_manager/
-- there are 3 **********************executable********************** in this package here - {ros2_control_node, spawner, unspawner}
+- there are 3 **executable** in this package here - {ros2_control_node, spawner, unspawner}
 - go into this directory, and check how to use the **spawner** - “./spawner -h” (for help)
     - We can see that in the “**franka.launch.py**” launch file, we first launch the **ros2_control_node**, with one of the parameters passed in being the **franka_controllers**
     - The **franka_controllers** are defined in **/franka_bringup/config/controllers.yaml**, however sadly there are only 5 controllers in there originally (people are lazy).
@@ -393,10 +401,10 @@ sudo systemctl daemon-reload && sudo systemctl restart cpufrequtils
 
 
 
-## List of Available (classes of) Controllers
+## List of Available (classes of) Controllers (DOESN’T WORK)
 
 - There is a list of available controllers (by their class definitions) which we can add to the  **/franka_bringup/config/controllers.yaml** file, using the above method, and then launch as a node by adding it into the launch file
-- The ********yaml******** file specifies these controllers to be update at **1000 Hz**
+- The **yaml** file specifies these controllers to be update at **1000 Hz**
 
 ```yaml
 controller_manager:
@@ -404,7 +412,8 @@ controller_manager:
     update_rate: 1000  # Hz
 ```
 
-- This specific ********yaml******** file, we can also customise the ************************panda_joints************************, since they are running **PID** controllers for any commands that are not at the ************effort************ level, and therefore can adjust the **P, I, D gains** to our preference (but again, don’t go too crazy 😎, haven’t tried it yet)
+- This specific **yaml** file, we can also customise the **panda_joints**, since they are running **PID** controllers for any commands that are not at the **effort** level, and therefore can adjust the **P, I, D gains** to our preference
+- NOTE: When tuning the PID controller, make sure to first only scale the **P, I, D** gain values of **all joints** **linearly** until reaching the desired range. Fine-tuning afterwards can then take place.
 - **Here is the majestic list of controllers:**
 
 controller_manager/test_controller
@@ -494,3 +503,4 @@ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR=/home/<path_to
 ```bash
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR=/home/<path_to_your_libfranka_folder>/build
 ```
+

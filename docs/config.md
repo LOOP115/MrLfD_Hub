@@ -1,18 +1,21 @@
-```
-sudo apt install -y libpoco-dev libeigen3-dev
-mkdir project && cd project
-git clone --recursive https://github.com/frankaemika/libfranka --branch 0.10.0
-cd libfranka
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF ..
-cmake --build . -j$(nproc)
-cpack -G DEB
-
-sudo dpkg -i libfranka-*.deb	#choose right version
-```
+## Configuration
 
 
+
+#### Intel RealSense Depth Camera D435if
+
+* [Get Started](https://www.intelrealsense.com/get-started-depth-camera/)
+* [Linux Distribution](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md)
+
+
+
+#### Franka
+
+[Franka_ROS2_Install](Franka_ROS2_Install.md)
+
+[Notion](https://www.notion.so/chri-lab/Franka_ROS2_Install-c0a47bf95d0c42099bac79e859c46ac6)
+
+**Packages**
 
 ```
 sudo apt install -y \
@@ -33,19 +36,9 @@ ros-humble-ros-ign-bridge \
 ros-humble-ros-ign
 ```
 
+**Commands**
 
-
-```
-cd project && mkdir franka_ws
-cd franka_ws && mkdir src && cd src
-git clone https://github.com/mcbed/franka_ros2.git
-cd
-cd franka_ros2 && git checkout humble
-cd project/franka_ws
-colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR=/home/loop/project/libfranka/build
-```
-
-
+Virtual
 
 ```
 ros2 launch panda gz.launch.py
@@ -57,7 +50,7 @@ ros2 launch franka_bringup move_to_start_example_controller.launch.py robot_ip:=
 ros2 launch franka_bringup franka.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
 ```
 
-
+Real
 
 ```
 ros2 launch franka_bringup franka.launch.py robot_ip:=172.16.0.2
