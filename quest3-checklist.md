@@ -1,4 +1,4 @@
-## Quest 3 - Pipeline
+## Quest 3 - Checklist
 
 
 
@@ -8,17 +8,24 @@
 
 
 
-Casting
+**Casting** ✅
 
-* developer hub
+* Developer Hub - Beta Cast 2.0
 
 
 
 Mixed reality capture
 
+
+
 Send capture to PC
 
-Place virtual planes
+
 
 Object detection
 
+
+
+### Unity
+
+* The user can place two virtual planes on the table
