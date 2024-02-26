@@ -1,4 +1,9 @@
-## Configuration
+## Devices
+
+#### Meta Quest 3
+
+- [Meta - Social features and sharing](https://www.meta.com/en-gb/help/quest/articles/in-vr-experiences/oculus-features/cast-with-quest/)
+- [Meta Quest Developer Hub](https://developer.oculus.com/meta-quest-developer-hub/)
 
 
 
@@ -10,7 +15,7 @@
 
 
 
-#### Franka
+#### Franka Emika Panda
 
 [Franka_ROS2_Install](Franka_ROS2_Install.md)
 
@@ -37,9 +42,9 @@ ros-humble-ros-ign-bridge \
 ros-humble-ros-ign
 ```
 
-**Commands**
+**CLI examples**
 
-Virtual
+**Simulation**
 
 ```
 ros2 launch panda gz.launch.py
@@ -51,7 +56,7 @@ ros2 launch franka_bringup move_to_start_example_controller.launch.py robot_ip:=
 ros2 launch franka_bringup franka.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
 ```
 
-Real
+**Real**
 
 ```
 ros2 launch franka_bringup franka.launch.py robot_ip:=172.16.0.2
