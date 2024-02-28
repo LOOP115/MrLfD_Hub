@@ -21,27 +21,6 @@
 
 [Notion](https://www.notion.so/chri-lab/Franka_ROS2_Install-c0a47bf95d0c42099bac79e859c46ac6)
 
-**Packages**
-
-```
-sudo apt install -y \
-ros-humble-control-msgs \
-ros-humble-xacro \
-ros-humble-angles \
-ros-humble-ros2-control \
-ros-humble-realtime-tools \
-ros-humble-control-toolbox \
-ros-humble-moveit \
-ros-humble-ros2-controllers \
-ros-humble-joint-state-publisher \
-ros-humble-joint-state-publisher-gui \
-ros-humble-ament-cmake-clang-format \
-ros-humble-ros-gz-sim \
-ros-humble-moveit-servo \
-ros-humble-ros-ign-bridge \
-ros-humble-ros-ign
-```
-
 **CLI examples**
 
 **Simulation**
