@@ -112,14 +112,9 @@ Create a workspace for ros2 and clone the given github repository:
 cd project && mkdir franka_ws
 cd franka_ws && mkdir src && cd src
 git clone https://github.com/mcbed/franka_ros2.git
-
 cd franka_ros2 && git checkout humble
-
 cd
 cd project/franka_ws
-
-colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR=/home/<path_to_your_libfranka_folder>/build
-
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR=~/project/libfranka/build
 ```
 
@@ -130,7 +125,7 @@ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR=~/project/libf
 Open the bashrc file and add the following lines
 
 ```bash
-source /home/<your_usernmae>/project/franka_ws/install/setup.sh
+source ~/project/franka_ws/install/setup.sh
 ```
 
 
@@ -176,7 +171,6 @@ git clone https://github.com/AndrejOrsula/panda_ign_moveit2.git
 cd panda_ign_moveit2
 
 git checkout humble
-cd && cd project/franka_ws
 ```
 
 
@@ -192,7 +186,7 @@ Before **building**, we need to edit 2 bash scripts which generate **sdf** and *
 
 Now, we can simply go to the **root of the workspace** and **build**:
 
-```cpp
+```bash
 cd && cd project/franka_ws
 colcon build
 ```
