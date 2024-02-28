@@ -25,7 +25,7 @@
 
 **Simulation**
 
-```
+```bash
 ros2 launch panda gz.launch.py
 
 ros2 launch franka_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_hardware:=true
@@ -37,7 +37,7 @@ ros2 launch franka_bringup franka.launch.py robot_ip:=dont-care use_fake_hardwar
 
 **Real**
 
-```
+```bash
 ros2 launch franka_bringup franka.launch.py robot_ip:=172.16.0.2
 
 ros2 launch franka_bringup move_to_start_example_controller.launch.py robot_ip:=172.16.0.2
