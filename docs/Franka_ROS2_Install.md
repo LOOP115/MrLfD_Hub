@@ -22,6 +22,8 @@ Install ROS2 (Humble Hawksbill)
 - Follow the instructions in the official documentation (ROS Humble)
     - [https://docs.ros.org/en/humble/Installation.html](https://docs.ros.org/en/humble/Installation.html)
 
+- [ROS2 For Beginners](https://github.com/LOOP115/ros2_study/blob/main/notes/ros2_for_beginners.md)
+
 
 
 # Libfranka
@@ -75,7 +77,10 @@ ros-humble-ros2-controllers \
 ros-humble-joint-state-publisher \
 ros-humble-joint-state-publisher-gui \
 ros-humble-ament-cmake-clang-format \
-python3-colcon-common-extensions
+ros-humble-ros-gz-sim \
+ros-humble-moveit-servo \
+ros-humble-ros-ign-bridge \
+ros-humble-ros-ign
 ```
 
 Open the bashrc file by entering the following command:
@@ -114,6 +119,8 @@ cd
 cd project/franka_ws
 
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR=/home/<path_to_your_libfranka_folder>/build
+
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR=~/project/libfranka/build
 ```
 
 
@@ -134,7 +141,7 @@ The above steps are also mentioned here (except github repository). Furthermore,
 execute the example to verify the installation.
 
 ```bash
-ros2 launch franka_moveit_config [moveit.launch.py](http://moveit.launch.py/) robot_ip:=dont-care use_fake_hardware:=true
+ros2 launch franka_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_hardware:=true
 ```
 
 
@@ -167,6 +174,7 @@ Install the following package for panda model in gazebo:
 cd project/franka_ws/src
 git clone https://github.com/AndrejOrsula/panda_ign_moveit2.git
 cd panda_ign_moveit2
+
 git checkout humble
 cd && cd project/franka_ws
 ```
@@ -220,7 +228,7 @@ gedit ~/franka_ws/src/panda_ign_moveit2/panda_description/panda/model.sdf
 
 1. Go to the src directory workspace
     1. (might need this first) → “`sudo apt-get install libignition-cmake2-dev`” (link to the discussion on the issue: [https://github.com/PX4/PX4-Autopilot/issues/20923](https://github.com/PX4/PX4-Autopilot/issues/20923))
-    2. `git clone [https://github.com/ros-controls/gz_ros2_control.git](https://github.com/ros-controls/gz_ros2_control.git) -b humble`
+    2. `git clone https://github.com/ros-controls/gz_ros2_control.git -b humble`
     3. `cd gz_ros2_control/`
     4. `git status`
     5. go to your ros2 workspace using `cd ../..`
