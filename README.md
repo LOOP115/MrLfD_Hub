@@ -10,6 +10,18 @@
 
 
 
+## Academic Outputs
+
+### [Proposal](docs/proposal.pdf)
+
+
+
+## [Videos](https://www.youtube.com/playlist?list=PLGZ6M30GmbVM7x_OCORl0q7Z4LuDY4KiY)
+
+
+
+
+
 ## Unity
 
 #### Config
@@ -41,9 +53,3 @@
 * Run the policy
 
 
-
-
-
-## Academic Outputs
-
-### [Proposal](docs/proposal.pdf)
