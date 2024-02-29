@@ -12,7 +12,7 @@
 
 ## Academic Outputs
 
-### [Proposal](docs/proposal.pdf)
+### [Proposal](docs//proposal/proposal.pdf)
 
 
 
@@ -51,5 +51,4 @@
 * Training
 
 * Run the policy
-
 
