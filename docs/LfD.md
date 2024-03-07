@@ -2,14 +2,22 @@
 
 
 
-Status lights
+## Control
+
+### Status lights
 
 - Red: reach joint limits
 - Yellow: singular configuration
 
 
 
-Tasks
+counter clockwise +
+
+clockwise -
+
+
+
+## Tasks
 
 * Detect object's location and pose
   * Depth Camera
