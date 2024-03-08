@@ -11,9 +11,13 @@
 
 
 
-counter clockwise +
+### Torque Direction
 
-clockwise -
+- counter clockwise `+`
+
+- clockwise `-`
+
+
 
 
 
@@ -27,4 +31,21 @@ clockwise -
 * Training
 
 * Run the policy
+
+
+
+
+
+## ROS TCP Connector
+
+### CLI
+
+```
+hostname -I
+
+colcon build
+source install/setup.bash
+
+ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=10.100.238.188
+```
 
