@@ -1,13 +1,17 @@
-## Devices
+# Devices
 
-#### Meta Quest 3
+
+
+## Meta Quest 3
 
 - [Meta - Social features and sharing](https://www.meta.com/en-gb/help/quest/articles/in-vr-experiences/oculus-features/cast-with-quest/)
 - [Meta Quest Developer Hub](https://developer.oculus.com/meta-quest-developer-hub/)
 
 
 
-#### Intel RealSense Depth Camera D435if
+
+
+## Intel RealSense Depth Camera D435if
 
 * [Get Started](https://www.intelrealsense.com/get-started-depth-camera/)
 * [Linux Distribution](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md)
@@ -15,31 +19,15 @@
 
 
 
-#### Franka Emika Panda
 
-[Franka_ROS2_Install](Franka_ROS2_Install.md)
 
-[Notion](https://www.notion.so/chri-lab/Franka_ROS2_Install-c0a47bf95d0c42099bac79e859c46ac6)
+## Franka Emika Panda
 
-**CLI examples**
+- [Franka Control Interface Documentation](https://frankaemika.github.io/docs/index.html)
 
-**Simulation**
+- [franka_ros2](https://frankaemika.github.io/docs/franka_ros2.html)
 
-```bash
-ros2 launch panda gz.launch.py
+- [Installation](franka_ros2_install.md)
 
-ros2 launch franka_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_hardware:=true
-
-ros2 launch franka_bringup move_to_start_example_controller.launch.py robot_ip:=dont-care use_fake_hardware:=true
-
-ros2 launch franka_bringup franka.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
-```
-
-**Real**
-
-```bash
-ros2 launch franka_bringup franka.launch.py robot_ip:=172.16.0.2
-
-ros2 launch franka_bringup move_to_start_example_controller.launch.py robot_ip:=172.16.0.2
-```
+- [CLI Memo](cli.md)
 
