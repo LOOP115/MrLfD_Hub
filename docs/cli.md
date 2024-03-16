@@ -17,11 +17,6 @@ xacro panda_arm.urdf.xacro > panda.urdf
 # MoveIt example
 ros2 launch franka_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_hardware:=true
 
-# Move-to-start
-ros2 launch franka_bringup move_to_start_example_controller.launch.py robot_ip:=dont-care use_fake_hardware:=true
-
-ros2 launch franka_bringup cartesian_pose_example_controller.launch.py robot_ip:=dont-care use_fake_hardware:=true
-
 ros2 launch franka_bringup franka.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
 
 ros2 launch franka_bringup joint_position_example_controller.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
@@ -29,13 +24,17 @@ ros2 launch franka_bringup joint_position_example_controller.launch.py robot_ip:
 ros2 control load_controller --set-state active
 
 ros2 launch panda gz.launch.py
+
+ros2 launch franka_bringup franka.launch.py robot_ip:=172.16.0.2
+
+ros2 launch franka_gripper gripper.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
 ```
 
 
 
 
 
-## **Real**
+## **Example Controllers**
 
 ```bash
 # MoveIt example
@@ -56,14 +55,26 @@ ros2 launch franka_bringup joint_impedance_with_ik_example_controller.launch.py 
 # Model Example Controller
 ros2 launch franka_bringup model_example_controller.launch.py robot_ip:=172.16.0.2
 
-ros2 launch franka_bringup franka.launch.py robot_ip:=172.16.0.2
+# Joint Position Example
+ros2 launch franka_bringup joint_position_example_controller.launch.py robot_ip:=172.16.0.2
+
+# Joint Velocity Example
+ros2 launch franka_bringup joint_velocity_example_controller.launch.py robot_ip:=172.16.0.2
+
+# Cartesian Pose Example
+ros2 launch franka_bringup cartesian_pose_example_controller.launch.py robot_ip:=172.16.0.2
+
+# Cartesian Orientation Example
+ros2 launch franka_bringup cartesian_orientation_example_controller.launch.py robot_ip:=172.16.0.2
+
+# Cartesian Pose Elbow Example
+ros2 launch franka_bringup cartesian_elbow_example_controller.launch.py robot_ip:=172.16.0.2
+
+# Cartesian Velocity Example
+ros2 launch franka_bringup cartesian_velocity_example_controller.launch.py robot_ip:=172.16.0.2
+
+# Cartesian Elbow Example
+ros2 launch franka_bringup elbow_example_controller.launch.py robot_ip:=172.16.0.2
 ```
 
-
-
-
-
-```
-ros2 launch franka_gripper gripper.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
-```
 
