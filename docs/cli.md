@@ -11,38 +11,47 @@ xacro panda_arm.urdf.xacro > panda.urdf
 
 
 
-## **Dummy**
 
-```bash
-# MoveIt example
-ros2 launch franka_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_hardware:=true
 
-ros2 launch franka_bringup franka.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
+## Simulation
 
-ros2 launch franka_bringup joint_position_example_controller.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
-
-ros2 control load_controller --set-state active
-
+```
 ros2 launch panda gz.launch.py
-
-ros2 launch franka_bringup franka.launch.py robot_ip:=172.16.0.2
-
-ros2 launch franka_gripper gripper.launch.py robot_ip:=dont-care use_fake_hardware:=true use_rviz:=true
 ```
 
 
 
 
 
-## **Example Controllers**
+## franka_ros2
+
+### General
 
 ```bash
-# MoveIt example
+# MoveIt
 ros2 launch franka_moveit_config moveit.launch.py robot_ip:=172.16.0.2
+
+# Dummy
+ros2 launch franka_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_hardware:=true
 
 # Move-to-start
 ros2 launch franka_bringup move_to_start_example_controller.launch.py robot_ip:=172.16.0.2
 
+# Start the robot without any controllers
+ros2 launch franka_bringup franka.launch.py robot_ip:=172.16.0.2
+
+# Load a controller
+ros2 control load_controller --set-state active [controller]
+
+# Stop a controller
+ros2 control set_controller_state [controller] inactive
+```
+
+
+
+### **Example Controllers**
+
+```bash
 # Gravity Compensation
 ros2 launch franka_bringup gravity_compensation_example_controller.launch.py robot_ip:=172.16.0.2
 
@@ -76,5 +85,4 @@ ros2 launch franka_bringup cartesian_velocity_example_controller.launch.py robot
 # Cartesian Elbow Example
 ros2 launch franka_bringup elbow_example_controller.launch.py robot_ip:=172.16.0.2
 ```
-
 
