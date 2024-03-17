@@ -6,10 +6,6 @@
 
 
 
-## [LfD on Franka](docs/LfD.md)
-
-
-
 ## [Real-time XR Object Detection](https://github.com/LOOP115/MCS_YOLOv8)
 
 
@@ -25,5 +21,4 @@
 ## Academic Outputs
 
 ### [Proposal](docs//proposal/proposal.pdf)
-
 

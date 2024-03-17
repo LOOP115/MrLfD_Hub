@@ -27,7 +27,7 @@
 
 - [franka_ros2](https://frankaemika.github.io/docs/franka_ros2.html)
 
-- [Installation](franka_ros2_install.md)
+- [Setup](setup_franka.md)
 
 - [CLI Memo](cli.md)
 

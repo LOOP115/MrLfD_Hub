@@ -5,27 +5,16 @@
 ## General
 
 ```bash
-# Covert XACRO to URDF
-xacro panda_arm.urdf.xacro > panda.urdf
-```
+# Build franka_ws
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 
-
-
-
-
-## Simulation
-
-```
+# Launch Gazebo with Franka
 ros2 launch panda gz.launch.py
 ```
 
 
 
-
-
 ## franka_ros2
-
-### General
 
 ```bash
 # MoveIt
@@ -46,8 +35,6 @@ ros2 control load_controller --set-state active [controller]
 # Stop a controller
 ros2 control set_controller_state [controller] inactive
 ```
-
-
 
 ### **Example Controllers**
 
