@@ -101,7 +101,7 @@ ros2 launch franka_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_h
 
 - Remove uncompatible libfranka versions
 
-```
+```bash
 dpkg -l | grep libfranka
 sudo dpkg -r libfranka
 sudo apt autoremove
@@ -169,7 +169,7 @@ export IGNITION_VERSION=fortress
 # Go back to workspace and build
 cd ..
 source ~/.bashrc
-colcon build
+colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
 ```
 
 ### Launch Gazebo with Franka
@@ -187,6 +187,6 @@ ros2 launch panda gz.launch.py
 cd ~/project/franka_sim/src/gz_ros2_control/
 git checkout 2c3c46fabfde600ca190c30d51288b8308e45d01
 cd ../..
-colcon build
+colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
 ```
 
