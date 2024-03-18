@@ -190,3 +190,16 @@ cd ../..
 colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
 ```
 
+### Install pymoveit2
+
+```bash
+# Go to the src directory
+cd
+cd project/franka_sim/src
+
+# Clone and build
+git clone https://github.com/AndrejOrsula/pymoveit2.git
+cd ..
+colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
+```
+

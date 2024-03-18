@@ -15,6 +15,25 @@ ros2 launch panda gz.launch.py
 
 
 
+## pymoveit2
+
+```bash
+# Move to joint configuration
+ros2 run pymoveit2 ex_joint_goal.py --ros-args -p joint_positions:="[1.57, -1.57, 0.0, -1.57, 0.0, 1.57, 0.7854]"
+# Move to Cartesian pose (motion in either joint or Cartesian space)
+ros2 run pymoveit2 ex_pose_goal.py --ros-args -p position:="[0.25, 0.0, 1.0]" -p quat_xyzw:="[0.0, 0.0, 0.0, 1.0]" -p cartesian:=False
+# Repeatadly toggle the gripper (or use "open"/"close" actions)
+ros2 run pymoveit2 ex_gripper.py --ros-args -p action:="toggle"
+# Example of using MoveIt 2 Servo to move the end-effector in a circular motion
+ros2 run pymoveit2 ex_servo.py
+# Example of adding a collision object with primitive geometry to the planning scene of MoveIt 2
+ros2 run pymoveit2 ex_collision_primitive.py --ros-args -p shape:="sphere" -p position:="[0.5, 0.0, 0.5]" -p dimensions:="[0.04]"
+# Example of adding a collision object with mesh geometry to the planning scene of MoveIt 2
+ros2 run pymoveit2 ex_collision_mesh.py --ros-args -p action:="add" -p position:="[0.5, 0.0, 0.5]" -p quat_xyzw:="[0.0, 0.0, -0.707, 0.707]"
+```
+
+
+
 ## franka_ros2
 
 ```bash
