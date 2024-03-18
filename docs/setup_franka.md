@@ -147,7 +147,6 @@ cd franka_sim && mkdir src && cd src
 
 # Clone repo
 git clone https://github.com/LOOP115/panda_ign_moveit2.git -b humble
-cd panda_ign_moveit2
 ```
 
 ### Install gz_ros2_control
