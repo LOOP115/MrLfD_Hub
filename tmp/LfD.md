@@ -36,23 +36,6 @@
 
 
 
-## ROS TCP Connector
-
-### CLI
-
-```
-hostname -I
-
-colcon build
-source install/setup.bash
-
-ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=10.100.238.188
-```
-
-
-
-
-
 ## Tasks
 
 Learning from Demonstration (LfD) can be particularly useful for robotic arm tasks that are complex, involve human-like dexterity, or are challenging to program explicitly using traditional methods. Here are some tasks where LfD has shown promise or could be beneficial for robotic arms:
