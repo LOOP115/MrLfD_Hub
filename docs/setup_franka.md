@@ -1,6 +1,6 @@
 # Setup Franka
 
-
+<br>
 
 ## Preparations
 
@@ -21,7 +21,7 @@ source /opt/ros/humble/setup.bash
 export RCUTILS_COLORIZED_OUTPUT=1
 ```
 
-
+<br>
 
 ## Install libfranka
 
@@ -40,7 +40,7 @@ cpack -G DEB
 sudo dpkg -i libfranka-*.deb
 ```
 
-
+<br>
 
 ## Install franka_ros2
 
@@ -107,7 +107,7 @@ sudo dpkg -r libfranka
 sudo apt autoremove
 ```
 
-
+<br>
 
 ## Simulation
 
