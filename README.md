@@ -1,16 +1,18 @@
 # MCS Research Project - Mixed Reality for Robotics
 
+This is a central repository for resources and documentation for my Master's research project at the University of Melbourne: Enhancing Robot Learning from Demonstration through Mixed Reality.
 
+<br>
 
 ## [Devices](docs/devices.md)
 
 
 
-## [Real-time XR Object Detection](https://github.com/LOOP115/MCS_YOLOv8)
-
-
-
 ## [Mixed Reality Workstation for LfD on Quest 3](https://github.com/LOOP115/MCS_XR_Quest3)
+
+
+
+## [Real-time XR Object Detection](https://github.com/LOOP115/YOLOv8_Quest3)
 
 
 
