@@ -15,15 +15,4 @@
 * [Linux Distribution](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md)
 * Start: `realsense-viewer`
 
-<br>
-
-## Franka Emika Panda
-
-- [Franka Control Interface Documentation](https://frankaemika.github.io/docs/index.html)
-
-- [franka_ros2](https://frankaemika.github.io/docs/franka_ros2.html)
-
-- [Setup](setup_franka.md)
-
-- [CLI Memo](cli.md)
 

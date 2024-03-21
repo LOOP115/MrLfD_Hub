@@ -11,6 +11,9 @@ colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=
 
 # Launch Gazebo with Franka
 ros2 launch panda gz.launch.py
+
+# Covert XACRO to URDF
+xacro panda_arm.urdf.xacro > panda.urdf
 ```
 
 <br>

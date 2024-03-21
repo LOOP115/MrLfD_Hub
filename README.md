@@ -1,10 +1,21 @@
-# MCS Research Project - Mixed Reality for Robotics
+# XR_Franka_Hub
 
-This is a central repository for resources and documentation for my Master's research project at the University of Melbourne: Enhancing Robot Learning from Demonstration through Mixed Reality.
+This is a central repository for resources and documentation for my Master's research project.
 
 <br>
 
-## [Devices](docs/devices.md)
+## Franka Emika Panda
+
+- [Franka Control Interface Documentation](https://frankaemika.github.io/docs/index.html)
+  - [franka_ros2](https://frankaemika.github.io/docs/franka_ros2.html)
+
+- [Setup Franka](docs/franka/setup_franka.md)
+
+- [CLI Memo](docs/franka/cli.md)
+
+<br>
+
+## [Control the Franka](https://github.com/LOOP115/franka_ctrl)
 
 
 
