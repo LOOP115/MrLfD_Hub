@@ -198,7 +198,7 @@ cd
 cd project/franka_sim/src
 
 # Clone and build
-git clone https://github.com/AndrejOrsula/pymoveit2.git
+git clone https://github.com/LOOP115/pymoveit2
 cd ..
 colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
 ```
