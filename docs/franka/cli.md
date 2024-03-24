@@ -5,10 +5,6 @@
 ## General
 
 ```bash
-# Build
-colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
-colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
-
 # Launch Gazebo with Franka
 ros2 launch panda gz.launch.py
 

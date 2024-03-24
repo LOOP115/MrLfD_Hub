@@ -16,6 +16,9 @@ pip install catkin_pkg empy lark pytest jinja2 pyaml typeguard
 
 ```bash
 gedit ~/.bashrc
+```
+
+```bash
 # Add these two lines to ~/.bashrc
 source /opt/ros/humble/setup.bash
 export RCUTILS_COLORIZED_OUTPUT=1
@@ -35,7 +38,9 @@ cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF ..
 cmake --build . -j$(nproc)
 cpack -G DEB
+```
 
+```bash
 # Replace the * with the actual numbers in the file name, which can be found in the current directory (run "ls" to see).
 sudo dpkg -i libfranka-*.deb
 ```
@@ -74,7 +79,9 @@ python3-colcon-common-extensions
 cd
 cd project && mkdir franka_ws
 cd franka_ws && mkdir src && cd src
+```
 
+```bash
 # Clone and build
 git clone https://github.com/frankaemika/franka_ros2.git
 cd franka_ros2 && git checkout humble
@@ -88,7 +95,9 @@ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```bash
 # Add this line to ~/.bashrc
 source ~/project/franka_ws/install/setup.bash
+```
 
+```bash
 # Run the example
 ros2 launch franka_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_hardware:=true
 ```
@@ -144,7 +153,9 @@ sudo apt-get install ignition-fortress
 cd
 cd project && mkdir franka_sim
 cd franka_sim && mkdir src && cd src
+```
 
+```bash
 # Clone repo
 git clone https://github.com/LOOP115/panda_ign_moveit2.git -b humble
 ```
@@ -154,21 +165,32 @@ git clone https://github.com/LOOP115/panda_ign_moveit2.git -b humble
 ```bash
 # Might need this first
 sudo apt-get install libignition-cmake2-dev
+```
 
+```bash
 # Go to the src directory
 cd
 cd project/franka_sim/src
 
 # Clone repo
 git clone https://github.com/ros-controls/gz_ros2_control.git -b humble
+```
 
+```bash
 gedit ~/.bashrc
 # Add this line to ~/.bashrc
 export IGNITION_VERSION=fortress
+```
 
+```bash
 # Go back to workspace and build
 cd ..
 source ~/.bashrc
+colcon build --merge-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
+```
+
+```bash
+# Symbolic link install (optional)
 colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
 ```
 
@@ -177,7 +199,9 @@ colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=
 ```bash
 # Add this line to .bashrc
 source ~/project/franka_sim/install/setup.bash
+```
 
+```bash
 ros2 launch panda gz.launch.py
 ```
 
@@ -187,7 +211,7 @@ ros2 launch panda gz.launch.py
 cd ~/project/franka_sim/src/gz_ros2_control/
 git checkout 2c3c46fabfde600ca190c30d51288b8308e45d01
 cd ../..
-colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
+colcon build --merge-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
 ```
 
 ### Install pymoveit2
@@ -196,10 +220,12 @@ colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=
 # Go to the src directory
 cd
 cd project/franka_sim/src
+```
 
+```bash
 # Clone and build
 git clone https://github.com/LOOP115/pymoveit2
 cd ..
-colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
+colcon build --merge-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
 ```
 
