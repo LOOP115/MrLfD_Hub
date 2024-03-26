@@ -14,33 +14,6 @@ xacro panda_arm.urdf.xacro > panda.urdf
 
 <br>
 
-## ROS-Unity Integration Examples
-
-```bash
-# Get ROS machine's IP
-hostname -I
-
-# Go into workspace
-source install/setup.bash
-
-# Start the endpoint
-ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=10.61.144.175
-
-# Publisher
-ros2 topic echo pos_rot
-
-# Subscriber
-ros2 run unity_robotics_demo color_publisher
-
-# Unity servive
-ros2 service call obj_pose_srv unity_robotics_demo_msgs/ObjectPoseService "{object_name: Cube}"
-
-# Service call
-ros2 run unity_robotics_demo position_service
-```
-
-<br>
-
 ## pymoveit2
 
 ```bash
