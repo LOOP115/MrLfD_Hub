@@ -17,15 +17,15 @@ This is a central repository for resources and documentation for my Master's res
 
 <br>
 
-## [Control the Franka](https://github.com/LOOP115/franka_ctrl)
+## [Franka_Ctrl](https://github.com/LOOP115/franka_ctrl)
 
 
 
-## [Mixed Reality Workstation for LfD on Quest 3](https://github.com/LOOP115/MCS_XR_Quest3)
+## [Franka_Quest3](https://github.com/LOOP115/Franka_Quest3)
 
 
 
-## [Real-time XR Object Detection](https://github.com/LOOP115/YOLOv8_Quest3)
+## [YOLOv8_Quest3](https://github.com/LOOP115/YOLOv8_Quest3)
 
 
 
