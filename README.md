@@ -1,4 +1,4 @@
-# XR_Franka_Hub
+# Franka_XR_Hub
 
 This is a central repository for resources and documentation for my Master's research project.
 
