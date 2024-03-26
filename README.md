@@ -9,7 +9,9 @@ This is a central repository for resources and documentation for my Master's res
 - [Franka Control Interface Documentation](https://frankaemika.github.io/docs/index.html)
   - [franka_ros2](https://frankaemika.github.io/docs/franka_ros2.html)
 
-- [Setup Franka](docs/franka/setup_franka.md)
+- [Setup franka_ros2](docs/franka/franka_ros2.md)
+
+- [Setup Gazebo with Franka](docs/franka/gazebo.md)
 
 - [CLI Memo](docs/franka/cli.md)
 
