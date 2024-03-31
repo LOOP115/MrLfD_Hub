@@ -4,7 +4,7 @@ This is a central repository for resources and documentation for my Master's res
 
 <br>
 
-## Franka Emika Panda
+### Franka Emika Panda
 
 - [Franka Control Interface Documentation](https://frankaemika.github.io/docs/index.html)
   - [franka_ros2](https://frankaemika.github.io/docs/franka_ros2.html)
@@ -15,25 +15,32 @@ This is a central repository for resources and documentation for my Master's res
 
 - [CLI Memo](docs/franka/cli.md)
 
+
 <br>
 
-## [Franka_Ctrl](https://github.com/LOOP115/franka_ctrl)
+### [Franka_Ctrl](https://github.com/LOOP115/franka_ctrl)
 
+A workspace dedicated to launching ROS2 programs for controlling Franka in both Gazebo and the real world.
 
+<br>
 
-## [Franka_Quest3](https://github.com/LOOP115/Franka_Quest3)
+### [Franka_Quest3](https://github.com/LOOP115/Franka_Quest3)
 
+A Unity project designed to connect with a ROS2 machine, offering features such as an XR control interface for Franka.
 
+<br>
 
-## [YOLOv8_Quest3](https://github.com/LOOP115/YOLOv8_Quest3)
+### [YOLOv8_Quest3](https://github.com/LOOP115/YOLOv8_Quest3)
 
+Utilize the Quest 3's cameras to identify the shapes and colours of EVA blocks using YOLOv8.
 
+<br>
 
-## [Video Demos](https://www.youtube.com/playlist?list=PLGZ6M30GmbVM7x_OCORl0q7Z4LuDY4KiY)
+### [Video Demos](https://www.youtube.com/playlist?list=PLGZ6M30GmbVM7x_OCORl0q7Z4LuDY4KiY)
 
+<br>
 
+### Academic Outputs
 
-## Academic Outputs
-
-### [Proposal](docs//proposal/proposal.pdf)
+#### [Proposal](docs//proposal/proposal.pdf)
 
