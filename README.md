@@ -20,19 +20,19 @@ This is a central repository for resources and documentation for my Master's res
 
 ### [Franka_Ctrl](https://github.com/LOOP115/franka_ctrl)
 
-A workspace dedicated to launching ROS2 programs for controlling Franka in both Gazebo and the real world.
+This is the ROS2 endpoint for the project, which enables launching of ROS2 programs to control Franka in Gazebo or the real world.
 
 <br>
 
 ### [Franka_Quest3](https://github.com/LOOP115/Franka_Quest3)
 
-A Unity project designed to connect with a ROS2 machine, offering features such as an XR control interface for Franka.
+This is the Unity endpoint for the project, offering features such as an XR control interface for Franka on Quest 3.
 
 <br>
 
 ### [YOLOv8_Quest3](https://github.com/LOOP115/YOLOv8_Quest3)
 
-Utilize the cameras of Quest 3 to identify the shapes and colours of a set of EVA blocks using YOLOv8.
+This project utilises the cameras of Quest 3 to identify the shapes and colours of a set of EVA blocks using YOLOv8.
 
 <br>
 
