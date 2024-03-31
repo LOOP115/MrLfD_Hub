@@ -32,7 +32,7 @@ A Unity project designed to connect with a ROS2 machine, offering features such 
 
 ### [YOLOv8_Quest3](https://github.com/LOOP115/YOLOv8_Quest3)
 
-Utilize the Quest 3's cameras to identify the shapes and colours of EVA blocks using YOLOv8.
+Utilize the cameras of Quest 3 to identify the shapes and colours of a set of EVA blocks using YOLOv8.
 
 <br>
 
