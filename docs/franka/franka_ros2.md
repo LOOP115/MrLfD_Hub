@@ -116,3 +116,53 @@ sudo dpkg -r libfranka
 sudo apt autoremove
 ```
 
+<br>
+
+## Enable real-time kernel
+
+- Create a new Ubuntu One account using your email, and register to [Ubuntu Pro](https://ubuntu.com/pro/dashboard) (free for personal use)
+- Find the free token and copy it
+- To attach your personal machine to a free Pro subscription, run: `sudo pro attach <your_token>`.
+- To enable the real-time beta kernel, run:
+
+```bash
+sudo pro enable realtime-kernel --b
+```
+
+- Restart the computer, and verify that real-time kernel is running
+  - run: `uname -r`.
+- After the `PREEMPT_RT` **kernel** is running, add a group named **realtime** and add the user controlling your robot to this group:
+
+```bash
+sudo addgroup realtime
+sudo usermod -a -G realtime $(whoami)
+```
+
+- Afterwards, add the following limits to the **realtime** group in `/etc/security/limits.conf`:
+
+```
+@**realtime** soft rtprio 99
+@**realtime** soft priority 99
+@**realtime** soft memlock 102400
+@**realtime** hard rtprio 99
+@**realtime** hard priority 99
+@**realtime** hard memlock 102400
+```
+
+- IMPORTANT:
+  - The limits will be applied after you **log out and in** again. (if not, restart the computer)
+
+<br>
+
+## Enable “performance” mode of all CPUs
+
+- `sudo apt install cpufrequtils`
+- `cpufreq-info`
+- Then, execute the following commands
+
+```bash
+sudo systemctl disable ondemand
+sudo systemctl enable cpufrequtils
+sudo sh -c 'echo "GOVERNOR=performance" > /etc/default/cpufrequtils'
+sudo systemctl daemon-reload && sudo systemctl restart cpufrequtils
+```
