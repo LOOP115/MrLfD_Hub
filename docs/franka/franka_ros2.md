@@ -83,7 +83,7 @@ cd franka_ws && mkdir src && cd src
 
 ```bash
 # Clone and build
-git clone https://github.com/frankaemika/franka_ros2.git
+git clone https://github.com/LOOP115/franka_ros2
 cd franka_ros2 && git checkout humble
 cd
 cd project/franka_ws
