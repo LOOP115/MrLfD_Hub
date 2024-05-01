@@ -17,8 +17,8 @@ ros-humble-ros-ign
 ## Install Gazebo
 
 ```bash
-sudo apt-get update
-sudo apt-get install lsb-release wget gnupg
+sudo apt update
+sudo apt install lsb-release wget gnupg
 
 sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 
@@ -52,7 +52,7 @@ git clone https://github.com/LOOP115/panda_ign_moveit2.git -b humble
 
 ```bash
 # Might need this first
-sudo apt-get install libignition-cmake2-dev
+sudo apt install libignition-cmake2-dev
 ```
 
 ```bash
