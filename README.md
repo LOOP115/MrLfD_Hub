@@ -13,13 +13,13 @@ This is a central repository for resources and documentation for **XRFranka**.
 
 <br>
 
-### [XRFranka ROS2](https://github.com/LOOP115/franka_ctrl)
+### [XRFranka ROS2](https://github.com/LOOP115/xrfranka_ros2)
 
 This is the ROS2 endpoint for the project, which enables launching of ROS2 programs to control Franka in Gazebo or the real world.
 
 <br>
 
-### [Franka_Quest3](https://github.com/LOOP115/Franka_Quest3)
+### [XRFranka Meta](https://github.com/LOOP115/XRFranka_Meta)
 
 This is the Unity endpoint for the project, offering features such as an XR control interface for Franka on Quest 3.
 
