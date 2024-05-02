@@ -25,7 +25,7 @@ This is the Unity endpoint for the project, offering features such as an XR cont
 
 <br>
 
-### [YOLOv8_Quest3](https://github.com/LOOP115/YOLOv8_Quest3)
+### [YOLO on Quest3](https://github.com/LOOP115/YOLO_Quest3)
 
 This project utilises the cameras of Quest 3 to identify the shapes and colours of a set of EVA blocks using YOLOv8.
 
