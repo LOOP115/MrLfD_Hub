@@ -1,24 +1,19 @@
-# Franka_XR_Hub
+# XRFranka Hub
 
-This is a central repository for resources and documentation for my Master's research project.
+This is a central repository for resources and documentation for **XRFranka**.
 
 <br>
 
-### Franka Emika Panda
+### Setup Franka Emika Panda
 
 - [Franka Control Interface Documentation](https://frankaemika.github.io/docs/index.html)
   - [franka_ros2](https://frankaemika.github.io/docs/franka_ros2.html)
-
 - [Setup franka_ros2](docs/franka/franka_ros2.md)
-
 - [Setup Gazebo with Franka](docs/franka/gazebo.md)
-
-- [CLI Memo](docs/franka/cli.md)
-
 
 <br>
 
-### [Franka_Ctrl](https://github.com/LOOP115/franka_ctrl)
+### [XRFranka ROS2](https://github.com/LOOP115/franka_ctrl)
 
 This is the ROS2 endpoint for the project, which enables launching of ROS2 programs to control Franka in Gazebo or the real world.
 

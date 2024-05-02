@@ -66,6 +66,9 @@ git clone https://github.com/ros-controls/gz_ros2_control.git -b humble
 
 ```bash
 gedit ~/.bashrc
+```
+
+```bash
 # Add this line to ~/.bashrc
 export IGNITION_VERSION=fortress
 ```
@@ -85,6 +88,10 @@ colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=
 <br>
 
 ## Launch Gazebo with Franka
+
+```bash
+gedit ~/.bashrc
+```
 
 ```bash
 # Add this line to .bashrc

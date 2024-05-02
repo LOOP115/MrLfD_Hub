@@ -93,6 +93,10 @@ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 ### Verify the installation
 
 ```bash
+gedit ~/.bashrc
+```
+
+```bash
 # Add this line to ~/.bashrc
 source ~/project/franka_ws/install/setup.bash
 ```
@@ -135,7 +139,7 @@ sudo pro enable realtime-kernel --b
 
 ```bash
 sudo addgroup realtime
-sudo usermod -a -G realtime $(whoami)
+sudo usermod -a -G realtime <user>
 ```
 
 - Afterwards, add the following limits to the **realtime** group in `/etc/security/limits.conf`:
@@ -154,7 +158,7 @@ sudo usermod -a -G realtime $(whoami)
 
 <br>
 
-## Enable “performance” mode of all CPUs
+## Enable performance mode of all CPUs
 
 - `sudo apt install cpufrequtils`
 - `cpufreq-info`
