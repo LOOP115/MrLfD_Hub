@@ -56,3 +56,8 @@ This project utilises the cameras of Quest 3 to identify the shapes and colours 
 
 [Proposal](docs//proposal/proposal.pdf)
 
+<br>
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
