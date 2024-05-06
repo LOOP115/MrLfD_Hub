@@ -2,6 +2,8 @@
 
 This is a central repository for resources and documentation for **XRFranka**.
 
+XRFranka is an application for the Meta Quest 3 that works with the Franka Emika Panda. It offers features such as teleoperation and visualisation of robot status. You can view the demos [here](https://www.youtube.com/watch?v=FrHReF052ss&list=PLGZ6M30GmbVPnrU4zVaIsvYRqLYsf4KVH&index=11).
+
 Before use, please follow the instructions provided in the [XRFranka ROS2](https://github.com/LOOP115/xrfranka_ros2) and [XRFranka Meta](https://github.com/LOOP115/XRFranka_Meta) repositories.
 
 <br>
@@ -45,10 +47,6 @@ This is the Unity endpoint for the project, offering features such as an XR cont
 ## [YOLO on Quest3](https://github.com/LOOP115/YOLO_Quest3)
 
 This project utilises the cameras of Quest 3 to identify the shapes and colours of a set of EVA blocks using YOLOv8.
-
-<br>
-
-## [Demo](https://www.youtube.com/watch?v=FrHReF052ss&list=PLGZ6M30GmbVPnrU4zVaIsvYRqLYsf4KVH&index=11)
 
 <br>
 
