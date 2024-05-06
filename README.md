@@ -52,7 +52,7 @@ This project utilises the cameras of Quest 3 to identify the shapes and colours 
 
 ## Academic Outputs
 
-[Proposal](docs//proposal/proposal.pdf)
+[Proposal](docs/proposal.pdf)
 
 <br>
 
