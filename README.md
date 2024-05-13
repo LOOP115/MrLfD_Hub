@@ -50,6 +50,18 @@ This project utilises the cameras of Quest 3 to identify the shapes and colours 
 
 <br>
 
+## [ User Study Data](userstudy/)
+
+- [Participant demographics](userstudy/demographics.csv)
+- [Feedback from participants on each task](userstudy/tasks.csv)
+- [Number of attempts and completion times for each Task](userstudy/attempts & time.xlsx)
+- [Trajectory data from Franka for each task](userstudy/trajectory/)
+  - Naming format: `task<taskId>_<round>_<participantId>.csv`
+  - [Kinesthetic teaching](userstudy/trajectory/kinesthetic/)
+  - [Teleoperation](userstudy/trajectory/teleoperation/)
+
+<br>
+
 ## Academic Outputs
 
 [Proposal](docs/proposal.pdf)
