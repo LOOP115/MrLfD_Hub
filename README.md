@@ -50,7 +50,7 @@ This is the Unity endpoint for the project, offering features such as an XR cont
 
 <br>
 
-## [ User Study Data](userstudy/)
+## [User Study Data](userstudy/)
 
 - [Participant demographics](userstudy/demographics.csv)
 - [Feedback from participants on each task](userstudy/tasks.csv)
@@ -59,6 +59,7 @@ This is the Unity endpoint for the project, offering features such as an XR cont
   - Naming format: `task<taskId>_<round>_<participantId>.csv`
   - [Kinesthetic teaching](userstudy/trajectory/kinesthetic/)
   - [Teleoperation](userstudy/trajectory/teleoperation/)
+- [Zip file containing all data](userstudy/userstudy.zip)
 
 <br>
 
