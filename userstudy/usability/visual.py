@@ -25,14 +25,14 @@ overall_teleoperation_std = data['Visualisation_Teleoperation'].std()
 x_labels = ['Pick and Place', 'Object Stacking', 'Object Insertion', 'Overall']
 x = range(len(x_labels))
 
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(12, 4))
 
 # Create the bars
 width = 0.35
 bars1 = plt.bar([i - width/2 for i in x], kinesthetic_means.tolist() + [overall_kinesthetic_mean],
-                yerr=kinesthetic_stds.tolist() + [overall_kinesthetic_std], width=width, label='Kinesthetic Teaching', color='blue', capsize=5)
+                width=width, label='Kinesthetic Teaching', color='blue', capsize=5)
 bars2 = plt.bar([i + width/2 for i in x], teleoperation_means.tolist() + [overall_teleoperation_mean],
-                yerr=teleoperation_stds.tolist() + [overall_teleoperation_std], width=width, label='Teleoperation', color='orange', capsize=5)
+                width=width, label='Teleoperation', color='orange', capsize=5)
 
 # Adding labels and title
 plt.xlabel('Task')
@@ -45,7 +45,7 @@ plt.ylim(0, 10)
 for bars, stds in zip([bars1, bars2], [kinesthetic_stds.tolist() + [overall_kinesthetic_std], teleoperation_stds.tolist() + [overall_teleoperation_std]]):
     for bar, std in zip(bars, stds):
         yval = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width()/2, 1, f'Mean: {round(yval, 2)}\nStd:{round(std, 2)}', ha='center')
+        plt.text(bar.get_x() + bar.get_width()/2, yval + 0.1, f'Mean: {round(yval, 2)}\nStd:{round(std, 2)}', ha='center')
 
 plt.legend()
 

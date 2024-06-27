@@ -80,20 +80,12 @@ short_background_questions = [
     "Upper Limb"
 ]
 
-# Shorten the background question phrases
-short_background_questions = [
-    "Videogames",
-    "AR/VR Apps",
-    "Robotic Arms",
-    "Upper Limb"
-]
-
 combined_corr_data.columns = short_background_questions
 
 # Plotting the heatmap with short phrases
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(8, 6))  # Smaller and more compact plot size
 sns.heatmap(combined_corr_data, annot=True, cmap='coolwarm', center=0, linewidths=.5)
-plt.title('Correlation Heatmap with Background Questions', fontsize=20)
-plt.xlabel('Background Questions', fontsize=14)
-plt.ylabel('Metrics', fontsize=14)
+plt.title('Correlation Heatmap with Background Questions', fontsize=16)
+plt.xlabel('Background Questions', fontsize=12)
+plt.ylabel('Metrics', fontsize=12)
 plt.show()

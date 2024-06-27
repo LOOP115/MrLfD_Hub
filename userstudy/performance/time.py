@@ -38,7 +38,7 @@ combined_time_data_with_all = pd.concat([time_methods, time_avg, all_tasks_time_
 plot_time_data_with_all = combined_time_data_with_all.pivot(index='Task ID', columns='Method', values=['mean', 'std'])
 
 # Plotting the completion time data
-fig, ax = plt.subplots(figsize=(14, 8))
+fig, ax = plt.subplots(figsize=(14, 4))
 
 methods = ['k', 't', 'avg']
 tasks_with_all = ['Pick and Place', 'Object Stacking', 'Object Insertion', 'All Tasks']

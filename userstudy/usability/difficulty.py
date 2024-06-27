@@ -7,13 +7,13 @@ file_path = '../tasks-nc.csv'
 data = pd.read_csv(file_path)
 
 # Calculate the average task difficulty for each task
-average_difficulty = data.groupby('Task ID')[
+average_difficulty = data.groupby('Task')[
     ['Task difficulty - Kinesthetic teaching', 'Task difficulty - Teleoperation']].mean()
 average_difficulty.loc['Overall'] = data[
     ['Task difficulty - Kinesthetic teaching', 'Task difficulty - Teleoperation']].mean()
 
 # Calculate the standard deviation for each task
-std_difficulty = data.groupby('Task ID')[
+std_difficulty = data.groupby('Task')[
     ['Task difficulty - Kinesthetic teaching', 'Task difficulty - Teleoperation']].std()
 std_difficulty.loc['Overall'] = data[
     ['Task difficulty - Kinesthetic teaching', 'Task difficulty - Teleoperation']].std()
@@ -23,7 +23,7 @@ average_difficulty = average_difficulty.reset_index()
 std_difficulty = std_difficulty.reset_index()
 
 # Plotting the bar chart
-plt.figure(figsize=(12, 6))  # Adjust the height to make the bars shorter
+plt.figure(figsize=(12, 3))  # Adjust the height to make the bars shorter
 bar_width = 0.35
 index = np.arange(len(average_difficulty))
 

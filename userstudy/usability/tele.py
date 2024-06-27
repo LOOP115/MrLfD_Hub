@@ -24,9 +24,8 @@ overall_std = data['Satisfactory'].std()
 x_labels = ['Pick and Place', 'Object Stacking', 'Object Insertion', 'Overall']
 
 # Create a plot with custom x labels and standard deviation labels under the mean
-plt.figure(figsize=(8, 4))
-bars = plt.bar(x_labels, task_means.tolist() + [overall_mean],
-               yerr=task_stds.tolist() + [overall_std], color=['blue', 'blue', 'blue', 'green'], capsize=5)
+plt.figure(figsize=(6, 4))
+bars = plt.bar(x_labels, task_means.tolist() + [overall_mean], color=['blue', 'blue', 'blue', 'green'], capsize=5)
 
 # Adding labels and title
 plt.xlabel('Task')
@@ -34,10 +33,10 @@ plt.ylabel('Mean Satisfactory Score')
 # plt.title('Mean Satisfactory Score on Teleoperation Movement by Task')
 plt.ylim(0, 10)
 
-# Adding the value labels on top of the bars
+# # Adding the value labels on top of the bars
 for bar, std in zip(bars, task_stds.tolist() + [overall_std]):
     yval = bar.get_height()
-    plt.text(bar.get_x() + 0.7, yval + 0.1, f'Mean: {round(yval, 2)}\nStd: {round(std, 2)})', ha='center')
+    plt.text(bar.get_x() + 0.4, yval + 0.1, f'Mean: {round(yval, 2)}\nStd: {round(std, 2)}', ha='center')
 
 # Show the plot
 plt.show()

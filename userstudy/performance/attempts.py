@@ -39,7 +39,7 @@ combined_data_with_all = pd.concat([task_methods, task_avg, all_tasks_mean_std, 
 plot_data_with_all = combined_data_with_all.pivot(index='Task ID', columns='Method', values=['mean', 'std'])
 
 # Plotting with the corrected data
-fig, ax = plt.subplots(figsize=(14, 8))
+fig, ax = plt.subplots(figsize=(14, 4))
 
 methods = ['k', 't', 'avg']
 tasks_with_all = ['Pick and Place', 'Object Stacking', 'Object Insertion', 'All Tasks']
