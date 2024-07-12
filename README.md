@@ -1,8 +1,8 @@
-# XRFranka Hub
+# Mr.LfD
 
-This is a central repository for resources and documentation for **XRFranka**.
+This is a central repository for resources and documentation for **Mr.LfD**.
 
-XRFranka is an application for the Meta Quest 3 that works with the Franka Emika Panda. It offers features such as teleoperation and visualisation of robot status. You can view the demos [here](https://www.youtube.com/watch?v=FrHReF052ss&list=PLGZ6M30GmbVPnrU4zVaIsvYRqLYsf4KVH&index=11).
+Mr.LfD is an application for the Meta Quest 3 that works with the Franka Emika Panda. It offers features such as teleoperation and visualisation of robot status. You can view the demos [here](https://www.youtube.com/watch?v=FrHReF052ss&list=PLGZ6M30GmbVPnrU4zVaIsvYRqLYsf4KVH&index=11).
 
 Before use, please follow the instructions provided in the [XRFranka ROS2](https://github.com/LOOP115/xrfranka_ros2) and [XRFranka Meta](https://github.com/LOOP115/XRFranka_Meta) repositories.
 
