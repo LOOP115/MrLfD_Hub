@@ -4,7 +4,7 @@ This is a central repository for resources and documentation for **Mr.LfD**.
 
 Mr.LfD is an application for the Meta Quest 3 that works with the Franka Emika Panda. It offers features such as teleoperation and visualisation of robot status. You can view the demos [here](https://www.youtube.com/watch?v=FrHReF052ss&list=PLGZ6M30GmbVPnrU4zVaIsvYRqLYsf4KVH&index=11).
 
-Before use, please follow the instructions provided in the [XRFranka ROS2](https://github.com/LOOP115/xrfranka_ros2) and [XRFranka Meta](https://github.com/LOOP115/XRFranka_Meta) repositories.
+Before use, please follow the instructions provided in the [mrlfd_ros2](https://github.com/LOOP115/mrlfd_ros2) and [MrLfD_MQ3](https://github.com/LOOP115/MrLfD_MQ3) repositories.
 
 <br>
 
@@ -24,21 +24,15 @@ Before use, please follow the instructions provided in the [XRFranka ROS2](https
 - [Meta Quest Developer Hub](https://developer.oculus.com/meta-quest-developer-hub/)
 - [SideQuest](https://sidequestvr.com/)
 
-### Intel RealSense Depth Camera D435if
-
-* [Get Started](https://www.intelrealsense.com/get-started-depth-camera/)
-* [Linux Distribution](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md)
-* Start: `realsense-viewer`
-
 <br>
 
-## [XRFranka ROS2](https://github.com/LOOP115/xrfranka_ros2)
+## [mrlfd_ros2](https://github.com/LOOP115/mrlfd_ros2)
 
 This is the ROS2 endpoint for the project, which enables launching of ROS2 programs to control Franka in Gazebo or the real world.
 
 <br>
 
-## [XRFranka Meta](https://github.com/LOOP115/XRFranka_Meta)
+## [MrLfD_MQ3](https://github.com/LOOP115/MrLfD_MQ3)
 
 This is the Unity endpoint for the project, offering features such as an XR control interface for Franka on Quest 3.
 
