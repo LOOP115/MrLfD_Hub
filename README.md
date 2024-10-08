@@ -44,19 +44,6 @@ This project utilises the cameras of Quest 3 to identify the shapes and colours 
 
 <br>
 
-## [User Study Data](userstudy/)
-
-- [Participant demographics](userstudy/demographics.csv)
-- [Feedback from participants on each task](userstudy/tasks.csv)
-- [Number of attempts and completion times for each task](userstudy/tasks_data.xlsx)
-- [Trajectory data from Franka for each task](userstudy/trajectory/)
-  - Naming format: `task<taskId>_<round>_<participantId>.csv`
-  - [Kinesthetic teaching](userstudy/trajectory/kinesthetic/)
-  - [Teleoperation](userstudy/trajectory/teleoperation/)
-- [Zip file containing all data](userstudy/userstudy.zip)
-
-<br>
-
 ## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
